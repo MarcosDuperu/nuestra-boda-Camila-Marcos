@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Camila y Marcos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <h1 class="titulo">Nuestra Boda</h1>
+        <h2 class="subtitulo">Camila y Marcos</h2>
+        <p>Este día muy especial de celebración no estaría completo sin la presencia de nuestros seres queridos, así que
+            queremos que estés allí con nosotros.</p>
+        <div class="fecha-boda">
+            <div class="bloque">SÁBADO</div>
+            <div>
+                <div class="central">15</div>
+                <div class="mes">NOVIEMBRE</div>
+            </div>
+            <div class="bloque">A LAS 8:20</div>
+        </div>
+        <img src="img/anillos.png" alt="Anillos" class="icon-img">
+        <div class="reproductor">
+            <h3 class="reproductor-titulo">Nuestra canción</h3>
+            <audio id="audioCancion" src="audio/nuestra-cancion.mp3"></audio>
+
+            <div class="controles-audio">
+                <button onclick="document.getElementById('audioCancion').play()" title="Reproducir">▶</button>
+                <button onclick="document.getElementById('audioCancion').pause()" title="Pausar">⏸</button>
+                <button onclick="document.getElementById('audioCancion').currentTime = 0" title="Reiniciar">⏮</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="tituloSecciones">Con la bendición de Dios y de nuestros padres</h2>
+        <h3 class="subtituloSecciones">Padres de la novia</h3>
+        <p class="nombresPadres">Claudia Rosa Villafañe<br>Néstor Javier Reitano</p>
+        <h3 class="subtituloSecciones">Padres del novio</h3>
+        <p class="nombresPadres">Ronasa Gabriela Millán<br>Sergio Alberto Duperú</p>
+    </section>
+
+    <section>
+        <h2 class="tituloSecciones">Solo Faltan:</h2>
+
+        <!-- Spinner loader -->
+        <div id="loader" class="loader"></div>
+
+        <!-- Contador (oculto al inicio) -->
+        <div id="countdown" class="contador" style="display: none;">
+            <div class="unidad">
+                <span id="dias" class="numero">00</span>
+                <span class="texto">Días</span>
+            </div>
+            <div class="unidad">
+                <span id="horas" class="numero">00</span>
+                <span class="texto">Horas</span>
+            </div>
+            <div class="unidad">
+                <span id="minutos" class="numero">00</span>
+                <span class="texto">Minutos</span>
+            </div>
+            <div class="unidad">
+                <span id="segundos" class="numero">00</span>
+                <span class="texto">Segundos</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="tituloSecciones">Vestimenta</h2>
+        <img src="img/vestimenta.png" alt="Vestimenta" class="icon-img">
+        <p>Vestimenta formal para hombres y mujeres.</p>
+        <p>Les pedimos con cariño que reserven el color blanco... para la novia 💕</p>
+    </section>
+
+    <section>
+        <h2 class="tituloSecciones">Publicá tus fotos</h2>
+        <img src="img/camara.png" alt="Cámara" class="icon-img">
+        <p>Ayudá a que crezcan nuestros recuerdos. Publicá tus fotos en redes sociales el día de la boda con nuestro
+            hashtag</p>
+        <h3 class="subtituloSecciones">#BodaReitanoDuperu</h3>
+    </section>
+
+    <section>
+        <h2 class="tituloSecciones">Celebraciones</h2>
+
+        <div class="evento-celebracion">
+            <h3 class="evento-tipo">Misa</h3>
+            <div class="evento-detalle">
+                <svg class="icono-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#a05c5c"
+                        d="M32 2C20 2 10 12 10 24c0 16 22 38 22 38s22-22 22-38C54 12 44 2 32 2zm0 30a8 8 0 110-16 8 8 0 010 16z">
+                        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="1s"
+                            repeatCount="indefinite" />
+                    </path>
+                </svg>
+
+
+                <span><a href="https://maps.app.goo.gl/wQMs9YmHrC6NKbbT9" target="_blank">Nuestra Señora del
+                        Carmen</a></span>
+            </div>
+            <div class="evento-detalle">
+                <svg class="icono-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#a05c5c" stroke-width="5" fill="none" />
+                    <circle cx="50" cy="50" r="3" fill="#a05c5c" />
+                    <line x1="50" y1="50" x2="50" y2="32" stroke="#a05c5c" stroke-width="4" transform-origin="50 50"
+                        style="animation: hora 43200s linear infinite;" />
+                    <line x1="50" y1="50" x2="50" y2="25" stroke="#a05c5c" stroke-width="3" transform-origin="50 50"
+                        style="animation: minuto 3600s linear infinite;" />
+                    <line x1="50" y1="50" x2="50" y2="20" stroke="#d88" stroke-width="2" transform-origin="50 50"
+                        style="animation: segundo 60s linear infinite;" />
+                </svg>
+
+
+                <span>18:00 hs</span>
+            </div>
+        </div>
+
+        <div class="evento-celebracion">
+            <h3 class="evento-tipo">Civil</h3>
+            <div class="evento-detalle">
+                <svg class="icono-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#a05c5c"
+                        d="M32 2C20 2 10 12 10 24c0 16 22 38 22 38s22-22 22-38C54 12 44 2 32 2zm0 30a8 8 0 110-16 8 8 0 010 16z">
+                        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="1s"
+                            repeatCount="indefinite" />
+                    </path>
+                </svg>
+
+
+                <span><a href="https://maps.app.goo.gl/9kLt1YPWZxe1EEe27" target="_blank">Salón Club Rodeo del
+                        Medio</a></span>
+            </div>
+            <div class="evento-detalle">
+                <svg class="icono-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#a05c5c" stroke-width="5" fill="none" />
+                    <circle cx="50" cy="50" r="3" fill="#a05c5c" />
+                    <line x1="50" y1="50" x2="50" y2="32" stroke="#a05c5c" stroke-width="4" transform-origin="50 50"
+                        style="animation: hora 43200s linear infinite;" />
+                    <line x1="50" y1="50" x2="50" y2="25" stroke="#a05c5c" stroke-width="3" transform-origin="50 50"
+                        style="animation: minuto 3600s linear infinite;" />
+                    <line x1="50" y1="50" x2="50" y2="20" stroke="#d88" stroke-width="2" transform-origin="50 50"
+                        style="animation: segundo 60s linear infinite;" />
+                </svg>
+
+
+                <span>20:30 hs</span>
+            </div>
+        </div>
+
+        <div class="evento-celebracion">
+            <h3 class="evento-tipo">Fiesta</h3>
+            <div class="evento-detalle">
+                <svg class="icono-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#a05c5c"
+                        d="M32 2C20 2 10 12 10 24c0 16 22 38 22 38s22-22 22-38C54 12 44 2 32 2zm0 30a8 8 0 110-16 8 8 0 010 16z">
+                        <animateTransform attributeName="transform" type="translate" values="0,0; 0,-2; 0,0" dur="1s"
+                            repeatCount="indefinite" />
+                    </path>
+                </svg>
+
+
+                <span><a href="https://maps.app.goo.gl/9kLt1YPWZxe1EEe27" target="_blank">Salón Club Rodeo del
+                        Medio</a></span>
+            </div>
+            <div class="evento-detalle">
+                <svg class="icono-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#a05c5c" stroke-width="5" fill="none" />
+                    <circle cx="50" cy="50" r="3" fill="#a05c5c" />
+                    <line x1="50" y1="50" x2="50" y2="32" stroke="#a05c5c" stroke-width="4" transform-origin="50 50"
+                        style="animation: hora 43200s linear infinite;" />
+                    <line x1="50" y1="50" x2="50" y2="25" stroke="#a05c5c" stroke-width="3" transform-origin="50 50"
+                        style="animation: minuto 3600s linear infinite;" />
+                    <line x1="50" y1="50" x2="50" y2="20" stroke="#d88" stroke-width="2" transform-origin="50 50"
+                        style="animation: segundo 60s linear infinite;" />
+                </svg>
+
+
+                <span>21:00 hs</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <p>Para ayudarnos a hacer realidad este hermoso sueño, les contamos que la tarjeta tiene un costo por persona...
+        </p>
+        <ul class="lista-iconos">
+            <li class="boleto">Adultos y niños mayores de 10 años: [monto]</li>
+            <li class="globo">Niños hasta 10 años: [monto reducido]</li>
+        </ul>
+        <p>Pueden realizar el pago a través de los siguientes medios: [Medios de pago]</p>
+        <p class="brillo">Les pedimos confirmar su asistencia y realizar el pago antes del 27 de octubre de 2025.</p>
+    </section>
+
+    <section>
+        <h2 class="tituloSecciones">Confirmar asistencia</h2>
+        <p>Su presencia en este día tan especial es el mayor regalo que podemos recibir.</p>
+        <a class="confirmar"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdMtGNjDBYNKfOT_HihkmupbNpY3xRknc8vnlzq4w9lQEOwsA/viewform?usp=dialog"
+            target="_blank">Confirmar asistencia</a>
+    </section>
+
+    <section>
+        <h2 class="titulo">Con amor</h2>
+        <h1 class="subtitulo">Camila y Marcos</h1>
+        <div class="foto-final-container">
+            <img src="img/foto-final.jpg" alt="Foto de Camila y Marcos" class="foto-final">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
