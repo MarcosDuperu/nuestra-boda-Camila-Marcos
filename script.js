@@ -1,11 +1,7 @@
+// ⏳ CONTADOR DE TIEMPO
 const targetDate = new Date(Date.UTC(2025, 10, 15, 21, 0, 0)); // 15/11/2025 18:00 GMT-3 = 21:00 UTC
 
-const lastValues = {
-  dias: null,
-  horas: null,
-  minutos: null,
-  segundos: null,
-};
+const lastValues = { dias: null, horas: null, minutos: null, segundos: null };
 
 function formatNumber(num) {
   return num.toString().padStart(2, '0');
@@ -25,7 +21,6 @@ function updateCountdown() {
   actualizarElemento("minutos", minutos);
   actualizarElemento("segundos", segundos);
 
-  // Mostrar el contador y ocultar el loader al primer render
   const loader = document.getElementById("loader");
   const countdown = document.getElementById("countdown");
   if (loader && countdown && countdown.style.display === "none") {
@@ -41,8 +36,6 @@ function actualizarElemento(id, nuevoValor) {
   if (lastValues[id] !== nuevoValor) {
     elemento.textContent = valorFormateado;
     elemento.classList.add("animate");
-
-    // Remover animación después de que termine para que pueda repetirse
     setTimeout(() => {
       elemento.classList.remove("animate");
     }, 500);
@@ -52,6 +45,8 @@ function actualizarElemento(id, nuevoValor) {
 }
 
 setInterval(updateCountdown, 1000);
+
+// 🎵 AUDIO
 const audio = document.getElementById('audioCancion');
 
 function reproducirCancion() {
@@ -67,3 +62,70 @@ function pausarCancion() {
   audio.pause();
 }
 
+// 🖼️ CARRUSEL CON SWIPER USANDO LISTA
+const fotos = [
+  'img/carrusel/foto-final.jpg',
+  'img/carrusel/foto-final2.jpg',
+  'img/carrusel/foto-final3.jpg',
+  'img/carrusel/foto-final4.jpg',
+  'img/carrusel/foto-final5.jpg',
+  /* 'img/carrusel/foto-final6.jpg', */
+  'img/carrusel/foto-final7.jpg',
+  'img/carrusel/foto-final8.jpg',
+  'img/carrusel/foto-final9.jpg',
+ /*  'img/carrusel/foto-final10.jpg', */
+  /* 'img/carrusel/foto-final11.jpg', */
+  /* 'img/carrusel/foto-final12.jpg', */
+  /* 'img/carrusel/foto-final13.jpg', */
+  /* 'img/carrusel/foto-final14.jpg', */
+  /* 'img/carrusel/foto-final15.jpg', */
+  /* 'img/carrusel/foto-final16.jpg', */
+  'img/carrusel/foto-final17.jpg',
+  /* 'img/carrusel/foto-final18.jpg', */
+  'img/carrusel/foto-final19.jpg',
+  /* 'img/carrusel/foto-final20.jpg', */
+  /* 'img/carrusel/foto-final21.jpg', */
+  'img/carrusel/foto-final22.jpg',
+  'img/carrusel/foto-final23.jpg'
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Insertar dinámicamente los slides
+  const wrapper = document.getElementById('swiper-wrapper');
+
+  fotos.forEach((src, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `Foto ${i + 1}`;
+
+    slide.appendChild(img);
+    wrapper.appendChild(slide);
+  });
+
+  // Inicializar Swiper después de insertar los slides
+  new Swiper('.swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 2.5,
+      slideShadows: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+});

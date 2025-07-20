@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <body>
 
@@ -217,11 +219,22 @@
             target="_blank">Confirmar asistencia</a>
     </section>
 
-    <section>
+    <!-- <section>
         <h2 class="titulo">Con amor</h2>
         <h1 class="subtitulo">Camila y Marcos</h1>
         <div class="foto-final-container">
-            <img src="img/foto-final.jpg" alt="Foto de Camila y Marcos" class="foto-final">
+            <img src="img/carrusel/foto-final.jpg" alt="Foto de Camila y Marcos" class="foto-final">
+        </div>
+    </section> -->
+    <section>
+        <h2 class="titulo">Con amor</h2>
+        <h1 class="subtitulo">Camila y Marcos</h1>
+
+        <div class="swiper carrusel-contenedor">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Las slides se agregan desde JS -->
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
