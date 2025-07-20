@@ -458,3 +458,13 @@ ul.lista-iconos {
   margin: 10px 0; /* Espaciado entre ítems */
 }
 
+.icono-audio {
+  width: 32px;
+  height: 32px;
+  fill: #a05c5c;
+  transition: transform 0.2s;
+}
+
+.controles-audio button:hover .icono-audio {
+  transform: scale(1.2);
+}
