@@ -456,3 +456,6 @@ ul.lista-iconos {
   display: block;
   margin: 10px auto 0;
 }
+button svg {
+  pointer-events: none; /* evita que el SVG intercepte el clic */
+}
