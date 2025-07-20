@@ -31,9 +31,25 @@
             <audio id="audioCancion" src="audio/nuestra-cancion.mp3"></audio>
 
             <div class="controles-audio">
-                <button onclick="document.getElementById('audioCancion').play()" title="Reproducir">▶</button>
-                <button onclick="document.getElementById('audioCancion').pause()" title="Pausar">⏸</button>
-                <button onclick="document.getElementById('audioCancion').currentTime = 0" title="Reiniciar">⏮</button>
+                <!-- Botón Play / Replay -->
+                <button onclick="playAudio()" title="Reproducir">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5"
+                        stroke="currentColor" width="32" height="32">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+                    </svg>
+                </button>
+
+                <!-- Botón Pausa -->
+                <button onclick="pauseAudio()" title="Pausar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5"
+                        stroke="currentColor" width="32" height="32">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M14.25 9v6m-4.5 0V9M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -192,9 +208,9 @@
     <section>
         <p>Para ayudarnos a hacer realidad este hermoso sueño, les contamos que la tarjeta tiene un costo por persona...
         </p>
-        <ul class="lista-iconos">
-            <li class="boleto">Adultos y niños mayores de 10 años: [monto]</li>
-            <li class="globo">Niños hasta 10 años: [monto reducido]</li>
+        <ul>
+            <p class="boleto">Adultos y niños mayores de 10 años: [monto]</p>
+            <p class="globo">Niños hasta 10 años: [monto reducido]</p>
         </ul>
         <p>Pueden realizar el pago a través de los siguientes medios: [Medios de pago]</p>
         <p class="brillo">Les pedimos confirmar su asistencia y realizar el pago antes del 27 de octubre de 2025.</p>

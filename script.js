@@ -52,3 +52,18 @@ function actualizarElemento(id, nuevoValor) {
 }
 
 setInterval(updateCountdown, 1000);
+const audio = document.getElementById('audioCancion');
+
+function playAudio() {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.currentTime = 0;
+    audio.play();
+  }
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+

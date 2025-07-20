@@ -449,3 +449,10 @@ ul.lista-iconos {
     flex-direction: column;
   }
 }
+.visualizador-audio {
+  width: 100%;
+  max-width: 300px;
+  height: 60px;
+  display: block;
+  margin: 10px auto 0;
+}
