@@ -54,7 +54,7 @@ function actualizarElemento(id, nuevoValor) {
 setInterval(updateCountdown, 1000);
 const audio = document.getElementById('audioCancion');
 
-function playAudio() {
+function reproducirCancion() {
   if (audio.paused) {
     audio.play();
   } else {
@@ -63,7 +63,7 @@ function playAudio() {
   }
 }
 
-function pauseAudio() {
+function pausarCancion() {
   audio.pause();
 }
 

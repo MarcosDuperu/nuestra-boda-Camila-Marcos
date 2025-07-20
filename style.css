@@ -438,15 +438,15 @@ ul.lista-iconos {
 
 @media (max-width: 480px) {
   .contador {
-    flex-direction: column;
+    flex-direction: row;
     font-size: 2em;
   }
   .evento-detalle {
-    flex-direction: column;
+    flex-direction: row;
     gap: 5px;
   }
   .fecha-boda {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 .visualizador-audio {
@@ -456,6 +456,16 @@ ul.lista-iconos {
   display: block;
   margin: 10px auto 0;
 }
-button svg {
-  pointer-events: none; /* evita que el SVG intercepte el clic */
+
+.lista-iconos {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+  text-align: center; /* Centra el texto */
+  margin: 0 auto; /* Centra el bloque horizontalmente */
 }
+
+.lista-iconos li {
+  margin: 10px 0; /* Espaciado entre ítems */
+}
+
