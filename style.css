@@ -423,6 +423,11 @@ ul.lista-iconos {
     height: 24px;
     margin-right: 6px;
   }
+  .icono-piePagina {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -549,4 +554,16 @@ ul.lista-iconos {
   height: 400px; /* o el alto que prefieras */
   object-fit: cover;
   border-radius: 8px;
+}
+.piePagina{
+  font-family: "Playfair Display", sans-serif;
+  font-size: 0.7em;
+  color: #916461;
+  margin-top: 0;
+}
+.icono-piePagina {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
