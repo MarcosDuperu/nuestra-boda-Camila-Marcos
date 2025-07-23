@@ -460,9 +460,6 @@ ul.lista-iconos {
     margin-right: 6px;
   }
 
-  .icono-piePagina {
-    width: 25px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -607,11 +604,4 @@ ul.lista-iconos {
   font-size: 0.7em;
   color: #916461;
   margin-top: 0;
-}
-
-.icono-piePagina {
-  width: 25px;
-  height: auto;
-  margin: 15px auto;
-  display: block;
 }
